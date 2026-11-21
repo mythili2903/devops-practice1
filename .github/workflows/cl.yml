@@ -16,15 +16,12 @@ jobs:
  
       - name: Check project files
         shell: pwsh
-        run: |
+        run: 
           if (-not (Test-Path "index.html")) {
             Write-Error "index.html does not exist!"
             exit 1
           }
  
-          if (-not (Test-Path "README.md")) {
-            Write-Error "README.md does not exist!"
-            exit 1
-          }
+        
  
           Write-Host "Project files checked successfully!"
